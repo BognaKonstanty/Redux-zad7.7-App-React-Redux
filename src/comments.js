@@ -5,7 +5,7 @@ import {THUMB_UP_COMMENT} from './actions'
 import {THUMB_DOWN_COMMENT } from './actions'
 
 
-function comments(state = [], action) {
+export function comments(state = [], action) {
 	switch(action.type){
 		case ADD_COMMENT:
 			return [{
@@ -15,8 +15,7 @@ function comments(state = [], action) {
 				}	
 				,...state.comments];
 		case REMOVE_COMMENT:
-			return  state.comments.filter(comment => comment.id !==action.id)
-			});	
+			return  state.filter(comment => comment.id !==action.id);
 		case EDIT_COMMENT:
 		return state.map(comment => {
 			if(comment.id === action.id) {
@@ -44,4 +43,4 @@ function comments(state = [], action) {
 		default:
 			return state;
 	}
-}
+};
