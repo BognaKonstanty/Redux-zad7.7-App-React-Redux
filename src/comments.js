@@ -1,11 +1,12 @@
-import {ADD_COMMENT} from './actions'
-import {EDIT_COMMENT} from './actions'
-import {REMOVE_COMMENT} from './actions'
-import {THUMB_UP_COMMENT} from './actions'
-import {THUMB_DOWN_COMMENT } from './actions'
+import {ADD_COMMENT} from './actions';
+import {EDIT_COMMENT} from './actions';
+import {REMOVE_COMMENT} from './actions';
+import {THUMB_UP_COMMENT} from './actions';
+import {THUMB_DOWN_COMMENT } from './actions';
 
 
-export function comments(state = [], action) {
+
+export default function comments(state = [], action) {
 	switch(action.type){
 		case ADD_COMMENT:
 			return [{
@@ -13,7 +14,7 @@ export function comments(state = [], action) {
 					text:action.text,
 					votes:0
 				}	
-				,...state.comments];
+				,...state];
 		case REMOVE_COMMENT:
 			return  state.filter(comment => comment.id !==action.id);
 		case EDIT_COMMENT:
@@ -44,3 +45,4 @@ export function comments(state = [], action) {
 			return state;
 	}
 };
+
