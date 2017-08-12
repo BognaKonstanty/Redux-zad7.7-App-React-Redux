@@ -29,25 +29,22 @@ function removeComment(id) {
     }
 }
 
-function ThumbUpComment(id) {
+function thumbUpComment(commentid) {
 	return {
 		type: THUMB_UP_COMMENT,
-		id: id
+		id: commentid
 	}
 }
 
-function ThumbDownComment(id) {
+function thumbDownComment(commentid) {
 	return {
 		type: THUMB_DOWN_COMMENT,
-		id: id
+		id: commentid
 	}
 }
 
-
-
-//export editComment;
-//export removeComment;
-//export ThumbUpComment;
-//export ThumbDownComment;
-
+export {editComment};
+export {removeComment};
+export {thumbUpComment};
+export {thumbDownComment};
 export {addComment};
