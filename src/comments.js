@@ -7,6 +7,7 @@ import {THUMB_DOWN_COMMENT } from './actions';
 
 
 export default function comments(state = [], action) {
+	debugger;
 	switch(action.type){
 		case ADD_COMMENT:
 			return [{
@@ -26,6 +27,7 @@ export default function comments(state = [], action) {
 			}
 		});
 		case THUMB_UP_COMMENT:
+			debugger;
 			return state.map(function(comment) {
 				if(comment.id === action.id) {
 					return {...comment, votes: comment.votes + 1};
