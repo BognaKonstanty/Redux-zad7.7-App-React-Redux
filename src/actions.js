@@ -30,7 +30,6 @@ function removeComment(id) {
 }
 
 function thumbUpComment(commentid) {
-    console.log('commentid', commentid);
 	return {
 		type: THUMB_UP_COMMENT,
 		id: commentid

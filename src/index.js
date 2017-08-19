@@ -20,7 +20,6 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-debugger;
 store.dispatch(addComment('pierwszy komentarz'));
 store.dispatch(addComment('drugi komentarz'));
 
