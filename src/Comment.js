@@ -4,7 +4,7 @@ import {thumbDownComment} from './actions.js';
 import {removeComment} from './actions.js';
 import {editComment} from './actions.js';
 
-const Comment = ({text, votes, id, thumbUpComent, thumbDownComent, removeComent}) => 
+const Comment = ({text, votes, id, thumbUpComment, thumbDownComment, removeComment}) => 
 <li>
 	{text}  
 	<span>votes: {votes}</span>
